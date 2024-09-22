@@ -24,6 +24,16 @@ monitors:
     followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
 
+  - id: starpot-ltd
+    name: starpot.ltd
+    description: 'seo1-server-02-KR' # default=empty
+    url: 'https://starpot.ltd/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: false # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
+
+    
   - id: www-cloudflare-com
     name: www.cloudflare.com
     description: 'Built for anything connected to the Internet.'
