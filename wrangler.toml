@@ -15,8 +15,7 @@ entry-point = "./"
 
 # uncomment and adjust following if you are not using GitHub Actions
 [env.production]
-kvid = ${{ secrets.CF_API_TOKEN }}
-kv-namespaces = [{binding="KV_STATUS_PAGE", id=kvid, preview_id=""}]
+kv-namespaces = [{binding="KV_STATUS_PAGE", id=$CF_KV_ID, preview_id=""}]
 #zone_id="xxx"
 #route="xxx"
 
