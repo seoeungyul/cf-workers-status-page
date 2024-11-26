@@ -35,7 +35,7 @@ jobs:
           [ -z "$SECRET_TELEGRAM_CHAT_ID" ] && echo "Secret SECRET_TELEGRAM_CHAT_ID not set, creating dummy one..." && SECRET_TELEGRAM_CHAT_ID="default-gh-action-secret" || true
           [ -z "$SECRET_DISCORD_WEBHOOK_URL" ] && echo "Secret SECRET_DISCORD_WEBHOOK_URL not set, creating dummy one..." && SECRET_DISCORD_WEBHOOK_URL="default-gh-action-secret" || true
           echo "[env.production]" >> wrangler.toml
-          echo "kv_namespaces = [{binding=\"KV_STATUS_PAGE\", id=\"$CF_KV_ID\"}]" >> wrangler.toml
+          echo "CF_KV_ID = [{binding=\"KV_STATUS_PAGE\", id=\"$CF_KV_ID\"}]" >> wrangler.toml
           postCommands: |
           yarn kv-gc
         secrets: |
