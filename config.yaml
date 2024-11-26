@@ -24,7 +24,7 @@ monitors:
     followRedirect: false # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
 
-  - id: files.seo1-dev # unique identifier
+  - id: files-seo1-dev # unique identifier
     name: files.seo1.dev
     description: 'seo1-server-03-KR' # default=empty
     url: 'https://files.seo1.dev/' # URL to fetch
