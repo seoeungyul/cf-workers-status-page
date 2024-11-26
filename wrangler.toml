@@ -12,6 +12,14 @@ crons = ["*/2 * * * *"]
 bucket = "out"
 entry-point = "./"
 
+
+# uncomment and adjust following if you are not using GitHub Actions
+[env.production]
+kvid = ${{ secrets.CF_API_TOKEN }}
+kv-namespaces = [{binding="KV_STATUS_PAGE", id=kvid, preview_id=""}]
+#zone_id="xxx"
+#route="xxx"
+
 # uncomment and adjust following if you are not using GitHub Actions
 #[env.production]
 #kv-namespaces = [{binding="KV_STATUS_PAGE", id="xxxx", preview_id=""}]
